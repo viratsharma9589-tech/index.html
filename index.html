@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virat Sharma | Premium Website Developer</title>
+
+<style>
+
+/* BODY BACKGROUND */
+body{
+margin:0;
+font-family:Arial;
+color:white;
+overflow-x:hidden;
+background: linear-gradient(270deg, #000000, #0f0f2f, #000000);
+background-size: 600% 600%;
+animation: gradientMove 15s ease infinite;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+/* GLOW ORBS */
+.hero::before,
+.hero::after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border-radius:50%;
+filter:blur(120px);
+opacity:0.5;
+animation: float 8s infinite alternate;
+}
+
+.hero::before{
+background:gold;
+top:-100px;
+left:-100px;
+}
+
+.hero::after{
+background:#00f0ff;
+bottom:-100px;
+right:-100px;
+}
+
+/* TEXT */
+.hero h1{
+font-size:60px;
+color:gold;
+}
+
+.hero p{
+font-size:20px;
+opacity:0.9;
+}
+
+/* BUTTON */
+.btn{
+padding:15px 30px;
+background:gold;
+color:black;
+border:none;
+cursor:pointer;
+margin-top:20px;
+font-size:18px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+/* SECTION */
+.section{
+padding:60px 10%;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+padding:25px;
+margin:20px 0;
+border-radius:15px;
+box-shadow:0 0 20px rgba(255,255,255,0.05);
+}
+
+/* PRICING */
+.price-box{
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(15px);
+padding:40px;
+text-align:center;
+border-radius:20px;
+border:2px solid gold;
+}
+
+.old-price{
+text-decoration:line-through;
+color:red;
+font-size:22px;
+}
+
+.new-price{
+font-size:40px;
+color:gold;
+}
+
+/* CONTACT */
+.contact{
+text-align:center;
+padding:50px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+/* ANIMATIONS */
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+@keyframes float{
+from{transform:translateY(0);}
+to{transform:translateY(50px);}
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<h1>Virat Sharma</h1>
+<p>I Create Premium Websites That Grow Your Business</p>
+<button class="btn" onclick="scrollToSection()">Get Your Website</button>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+<h2>About Me</h2>
+<div class="card">
+I build high-quality, modern and fully customized websites.  
+You tell me your idea — I convert it into a powerful website.
+</div>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+<h2>Types of Websites</h2>
+
+<div class="card">
+<b>Business Website</b><br>
+English: Website to grow your business and attract customers.<br>
+Hindi: यह वेबसाइट बिजनेस को बढ़ाने और ग्राहक लाने के लिए होती है।
+</div>
+
+<div class="card">
+<b>E-commerce Website</b><br>
+English: Website to sell products online.<br>
+Hindi: यह वेबसाइट ऑनलाइन सामान बेचने के लिए होती है।
+</div>
+
+<div class="card">
+<b>School Website</b><br>
+English: Website for school info, admission and updates.<br>
+Hindi: यह वेबसाइट स्कूल की जानकारी और एडमिशन के लिए होती है।
+</div>
+
+<div class="card">
+<b>Portfolio Website</b><br>
+English: Website to show your skills and work.<br>
+Hindi: यह वेबसाइट आपकी स्किल्स और काम दिखाने के लिए होती है।
+</div>
+
+<div class="card">
+<b>Custom Website</b><br>
+English: Website made exactly as per your needs.<br>
+Hindi: यह वेबसाइट आपकी जरूरत के हिसाब से बनाई जाती है।
+</div>
+
+</div>
+
+<!-- PRICING -->
+<div class="section">
+<h2>Pricing</h2>
+
+<div class="price-box">
+<p class="old-price">₹50000</p>
+<p class="new-price">₹25000 ONLY</p>
+<p>Limited Offer – High Quality Premium Website</p>
+<button class="btn" onclick="contact()">Book Now</button>
+</div>
+
+</div>
+
+<!-- WHY ME -->
+<div class="section">
+<h2>Why Choose Me</h2>
+
+<div class="card">
+✔ Premium Design<br>
+✔ Fast & Modern<br>
+✔ Fully Customizable<br>
+✔ Affordable Price<br>
+✔ Personal Support
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div class="contact">
+<h2>Contact Me</h2>
+
+<p>📞 9810077711</p>
+<p>📧 viratsharma9589@gmail.com</p>
+
+<button class="btn" onclick="contact()">Chat on WhatsApp</button>
+</div>
+
+<script>
+
+function scrollToSection(){
+window.scrollTo({top:window.innerHeight,behavior:"smooth"});
+}
+
+function contact(){
+window.location.href="https://wa.me/919810077711";
+}
+
+</script>
+
+</body>
+</html>
